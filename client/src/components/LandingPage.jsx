@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 export default function LandingPage() {
   return (
     <main className="flex-1">
-      <section className="w-full py-12 md:py-24 lg:py-32">
+      <section className="w-full py-12 md:py-18">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_550px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                <h1 className="text-3xl font-bold sm:text-5xl xl:text-6xl/none">
                   Collaborative Document Editing
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -19,15 +19,15 @@ export default function LandingPage() {
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link
                   to="#"
-                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-primary/70 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 >
-                  Try for Free
+                  Just Try It!!
                 </Link>
                 <Link
                   to="#"
                   className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 >
-                  Contact Sales
+                  Log In
                 </Link>
               </div>
             </div>
@@ -97,68 +97,6 @@ export default function LandingPage() {
                   </div>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              What Our Users Say
-            </h2>
-            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Hear from our customers about how Collab Editor has transformed
-              the way they work.
-            </p>
-          </div>
-          <div className="divide-y rounded-lg border">
-            <div className="grid w-full grid-cols-1 items-stretch justify-center divide-x md:grid-cols-3">
-              <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 p-8">
-                {/* <Avatar>
-                    <AvatarImage src="/placeholder-user.jpg" />
-                    <AvatarFallback>JD</AvatarFallback>
-                  </Avatar> */}
-                <div className="text-center">
-                  <p className="text-lg font-medium">John Doe</p>
-                  <p className="text-muted-foreground">Product Manager</p>
-                </div>
-                <p className="text-muted-foreground">
-                  "Collab Editor has been a game-changer for our team. The\n
-                  real-time collaboration and version control features have\n
-                  made our document workflows so much more efficient."
-                </p>
-              </div>
-              <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 p-8">
-                {/* <Avatar>
-                    <AvatarImage src="/placeholder-user.jpg" />
-                    <AvatarFallback>SM</AvatarFallback>
-                  </Avatar> */}
-                <div className="text-center">
-                  <p className="text-lg font-medium">Sarah Miller</p>
-                  <p className="text-muted-foreground">Marketing Coordinator</p>
-                </div>
-                <p className="text-muted-foreground">
-                  "I love how Collab Editor makes it easy for our team to\n
-                  collaborate on content. The commenting tools are so\n helpful
-                  for providing feedback and staying aligned."
-                </p>
-              </div>
-              <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 p-8">
-                {/* <Avatar>
-                    <AvatarImage src="/placeholder-user.jpg" />
-                    <AvatarFallback>AM</AvatarFallback>
-                  </Avatar> */}
-                <div className="text-center">
-                  <p className="text-lg font-medium">Alex Martinez</p>
-                  <p className="text-muted-foreground">Software Engineer</p>
-                </div>
-                <p className="text-muted-foreground">
-                  "Collab Editor has streamlined our document workflows and\n
-                  made it so much easier to keep track of changes and\n
-                  versions. It's a must-have tool for any team."
-                </p>
-              </div>
             </div>
           </div>
         </div>

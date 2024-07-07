@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 export default function index() {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col items-center min-h-[100dvh]">
       <Navbar />
       <Outlet />
       <Footer />

@@ -1,4 +1,4 @@
-export default function FileIcon(props) {
+export default function PenIcon(props) {
   return (
     <svg
       {...props}
@@ -12,8 +12,7 @@ export default function FileIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+      <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
     </svg>
   );
 }
