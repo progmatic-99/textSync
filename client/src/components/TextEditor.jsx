@@ -3,6 +3,7 @@
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
 import { useCallback, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import io from "socket.io-client";
 
 const TOOLBAR_OPTIONS = [
@@ -17,6 +18,7 @@ const TOOLBAR_OPTIONS = [
 ];
 
 export default function TextEditor() {
+  const { id: documentId } = useParams();
   const [socket, setSocket] = useState();
   const [quill, setQuill] = useState();
 
@@ -28,6 +30,15 @@ export default function TextEditor() {
       s.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+    if (socket == null || quill == null) return;
+    socket.once("load-document", () => {
+      quill.setContents(document);
+      quill.enable();
+    });
+    socket.emit("get-document", documentId);
+  }, [socket, quill, documentId]);
 
   // update changes across all users
   useEffect(() => {

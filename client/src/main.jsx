@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "document/:id",
+        path: "d/:id",
         element: <TextEditor />,
       },
     ],
