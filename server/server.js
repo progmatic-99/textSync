@@ -6,6 +6,7 @@ const io = require("socket.io")(3001, {
 });
 
 io.on("connection", (socket) => {
+  console.log("Connection established");
   socket.on("get-document", (documentId) => {
     const data = "";
     socket.join(documentId);

@@ -33,7 +33,7 @@ export default function TextEditor() {
 
   useEffect(() => {
     if (socket == null || quill == null) return;
-    socket.once("load-document", () => {
+    socket.once("load-document", (document) => {
       quill.setContents(document);
       quill.enable();
     });
@@ -43,8 +43,8 @@ export default function TextEditor() {
   // update changes across all users
   useEffect(() => {
     if (socket == null || quill == null) return;
-    const handler = (delta, source) => {
-      if (source !== "server") return;
+    const handler = (delta) => {
+      // if (source !== "server") return;
       quill.updateContents(delta);
     };
     socket.on("receive-changes", handler);
@@ -81,6 +81,8 @@ export default function TextEditor() {
         toolbar: TOOLBAR_OPTIONS,
       },
     });
+    q.disable();
+    q.setText("Loading...");
     setQuill(q);
   }, []);
   return <div className="container" ref={wrapperRef}></div>;
