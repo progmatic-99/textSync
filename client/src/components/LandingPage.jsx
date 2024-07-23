@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import hero from "../assets/hero.jpg";
+import { v4 as uuidV4 } from "uuid";
 
 export default function LandingPage() {
   return (
     <main className="flex-1">
-      <section className="w-full py-12 md:py-18">
+      <section className="w-full py-12">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_550px]">
             <div className="flex flex-col justify-center space-y-4">
@@ -18,13 +20,13 @@ export default function LandingPage() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link
-                  to="#"
+                  to={`d/${uuidV4()}`}
                   className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-primary/70 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 >
                   Just Try It!!
                 </Link>
                 <Link
-                  to="#"
+                  to="login"
                   className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 >
                   Log In
@@ -32,7 +34,7 @@ export default function LandingPage() {
               </div>
             </div>
             <img
-              src="/placeholder.svg"
+              src={hero}
               width="550"
               height="550"
               alt="Hero"
@@ -41,7 +43,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+      <section className="w-full py-12 bg-muted">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -59,7 +61,7 @@ export default function LandingPage() {
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
             <img
-              src="/placeholder.svg"
+              src={hero}
               width="550"
               height="310"
               alt="Image"
