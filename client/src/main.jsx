@@ -5,6 +5,7 @@ import Layout from "./components/layout";
 import TextEditor from "./components/TextEditor";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Login from "./components/Login";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "d/:id",
         element: <TextEditor />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },
